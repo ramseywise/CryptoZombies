@@ -3,7 +3,7 @@ const CryptoZombies = artifacts.require("CryptoZombies");
 
 const utils = require("./helpers/utils");
 const time = require("./helpers/time");
-// npm -g install chai 
+// npm -g install chai
 var expect = require("chai").expect;
 const zombieNames = ["Zombie 1", "Zombie 2"];
 
@@ -35,7 +35,7 @@ contract("CryptoZombies", (accounts) => {
             contractInstance.createRandomZombie(zombieNames[1], { from: alice })
         );
     });
-    
+
     // add contexts
     context("with the single-step transfer scenario", async () => {
         it("should transfer a zombie", async () => {

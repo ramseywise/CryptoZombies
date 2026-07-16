@@ -1,13 +1,13 @@
 pragma solidity 0.5.0;
 
-import "openzeppelin-solidity/contracts/access/Roles.sol"; 
+import "openzeppelin-solidity/contracts/access/Roles.sol";
 // NOTE: roles allows for levels of access between owner and oracle, but requires additional functions
 // import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
 import "./CallerContractInterface.sol";
 
 contract EthPriceOracle {
   // attache roles to data type and declare roles
-  using Roles for Roles.Role; 
+  using Roles for Roles.Role;
   Roles.Role private owners;
   Roles.Role private oracles;
 

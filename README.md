@@ -1,5 +1,5 @@
 # CryptoZombies
-This implements lessons from [CryptoZombies](https://cryptozombies.io), a free interactive code school that teaches you to write smart contracts in Solidity through building your own crypto-collectables game. 
+This implements lessons from [CryptoZombies](https://cryptozombies.io), a free interactive code school that teaches you to write smart contracts in Solidity through building your own crypto-collectables game.
 
 The app is built in [Truffle](http://truffleframework.com) for testing and blockchain pipeline deployment using Ethereum Virtual Machine.
 
@@ -30,8 +30,8 @@ In the first lesson, contracts are introduced along with
 - introduces web3 library for how frontend interacts with smart contracts
 
 #### 2. Beyond the Basics
-In this lesson, additional solidity concepts are introduced, including 
-- array mappings 
+In this lesson, additional solidity concepts are introduced, including
+- array mappings
 - addresses to identify a user or smart contract
 - identify messenger with msg.sender
 - throw error with require to verify certain conditions are true before running a function
@@ -60,7 +60,7 @@ In this lesson, additional solidity concepts are introduced, including
 
     Ethereum is like a big, slow, but extremely secure computer. When you execute a function, every single node on the network needs to run that same function to verify its output — thousands of nodes verifying every function execution is what makes Ethereum decentralized, and its data immutable and censorship-resistant.
 
-    The creators of Ethereum wanted to make sure someone couldn't clog up the network with an infinite loop, or hog all the network resources with really intensive computations. So they made it so transactions aren't free, and users have to pay for computation time as well as storage.   
+    The creators of Ethereum wanted to make sure someone couldn't clog up the network with an infinite loop, or hog all the network resources with really intensive computations. So they made it so transactions aren't free, and users have to pay for computation time as well as storage.
 
     Here are two general strategies for saving gas with uints inside structs:
         - Use the smallest integer sub-types you can get away with.
@@ -159,7 +159,7 @@ Update package.json file -> add scripts to package.json to automatically update 
     ```cd oracle && npx truffle migrate --network extdev --reset -all && cd ..```
     ```cd caller && npx truffle migrate --network extdev --reset -all && cd ..```
 
-deploy all 
+deploy all
     ```npm run deploy:all```
 
 initialize project
@@ -171,7 +171,5 @@ install dependencies
 start oracle
     ```node EthPriceOracle.js.```
 
-start client 
+start client
     ```node Client.js```
-
-

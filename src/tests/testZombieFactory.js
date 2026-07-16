@@ -16,7 +16,7 @@ contract('ZombieFactory', function (accounts) {
   })
 
 
-  // Tests for creatRandomZombie function 
+  // Tests for creatRandomZombie function
   it('should only create one zombie per address', async function () {
     await ZombieFactoryInstance.createRandomZombie("Mike", { 'from': accounts[0] })
     let ownerZombieCounts = await ZombieFactoryInstance.ownerZombieCount(accounts[0])
@@ -24,7 +24,7 @@ contract('ZombieFactory', function (accounts) {
 
   })
 
-  // Test for creatRandomZombie function 
+  // Test for creatRandomZombie function
   it('should not be able to create a second zombie per address', async function () {
     await ZombieFactoryInstance.createRandomZombie("Mike", { 'from': accounts[0] })
     await truffleAssert.reverts(ZombieFactoryInstance.createRandomZombie("Mike", { 'from': accounts[0] }))

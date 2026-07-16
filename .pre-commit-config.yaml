@@ -1,0 +1,27 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-added-large-files
+        args: ["--maxkb=10000"]
+      - id: check-merge-conflict
+      - id: check-json
+      - id: detect-private-key
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.24.3
+    hooks:
+      - id: gitleaks
+        name: detect secrets (gitleaks)
+
+  - repo: local
+    hooks:
+      - id: solhint
+        name: solhint (contracts)
+        language: system
+        entry: npx --yes solhint --max-warnings 500
+        files: \.sol$
+        # lessons/ holds intentionally incomplete tutorial snippets
+        exclude: ^src/lessons/

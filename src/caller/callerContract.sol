@@ -8,7 +8,7 @@ contract CallerContract is Ownbable {
     uint256 private ethPrice; // declare price
     EthPriceOracleInterface private oracleInstance; // declare oracle instance
     address private oracleAddress; // provide address of oracle smart contract
-    
+
     event newOracleAddressEvent(address oracleAddress);
     event ReceivedNewRequestIdEvent(uint256 id);
     event PriceUpdatedEvent(uint256 ethPrice, uint256 id);

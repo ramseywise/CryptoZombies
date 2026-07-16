@@ -24,7 +24,7 @@ contract ZombieFeeding is ZombieFactory {
   KittyInterface kittyContract = KittyInterface(ckAddress);
 
   function feedAndMultiply(uint _zombieId, uint _targetDna, string memory _species) public {
-    /// Verify zombie owner 
+    /// Verify zombie owner
     require(msg.sender == zombieToOwner[_zombieId]);
     /// Add zombie id to storage
     Zombie storage myZombie = zombies[_zombieId];

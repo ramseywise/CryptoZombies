@@ -26,6 +26,6 @@ contract ZombieAttack is ZombieHelper {
       myZombie.lossCount++;
       enemyZombie.winCount++;
       _triggerCooldown(myZombie);
-    } 
+    }
   }
 }

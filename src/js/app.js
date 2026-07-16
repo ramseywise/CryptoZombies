@@ -3,7 +3,7 @@ var userAccount;
 
 function startApp() {
   $.getJSON('ZombieOwnership.json', function(data) {
-    var ZombieOwnershipArtifact = data;    
+    var ZombieOwnershipArtifact = data;
     cryptoZombies = TruffleContract(ZombieOwnershipArtifact);
     cryptoZombies.setProvider(web3js);
 

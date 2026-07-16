@@ -1,7 +1,7 @@
 pragma solidity >=0.5.0 <0.6.0;
 
 contract ZombieFactory {
-    // Declare contract that adds to zombie factory database on the blockchain. 
+    // Declare contract that adds to zombie factory database on the blockchain.
     // Define parameters and structure of contract.
     event NewZombie(uint zombieId, string name, uint dna);
     uint dnaDigits = 16;

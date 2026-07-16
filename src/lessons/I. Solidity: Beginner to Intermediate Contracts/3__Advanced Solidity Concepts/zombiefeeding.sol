@@ -36,7 +36,7 @@ contract ZombieFeeding is ZombieFactory {
   }
 
   function feedAndMultiply(uint _zombieId, uint _targetDna, string memory _species) public {
-    require(msg.sender == zombieToOwner[_zombieId]); /// Verify zombie owner 
+    require(msg.sender == zombieToOwner[_zombieId]); /// Verify zombie owner
     Zombie storage myZombie = zombies[_zombieId]; /// Add zombie id to storage
     require(_isReady(myZombie)); /// Verify zombie had cool down period
     _targetDna = _targetDna % dnaModulus; /// Take only last 16 digits of dna.
